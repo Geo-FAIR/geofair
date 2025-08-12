@@ -1,6 +1,6 @@
 # geofair
 This is the website for the GeoFAIR project.
-Live site: https://<your-username>.github.io/<repo-name>/
+Live site: https://natalieraia.github.io/geofair/
 
 ## Structure
 - `docs/` → GitHub Pages source (static HTML/CSS/JS)
