@@ -110,3 +110,13 @@ h2{ font-size: clamp(1.35rem, 1.8vw, 1.6rem); margin:1.4rem 0 .6rem 0 }
   border-top: 1px solid rgba(122,162,255,.12);
   padding: 1.2rem 0; color: var(--muted);
 }
+
+.homepage-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 2rem auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
