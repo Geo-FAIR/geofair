@@ -8,6 +8,47 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    .committee-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .committee-member {
+      text-align: center;
+    }
+    .committee-member img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+    .committee-member h3 {
+      font-size: 1rem;
+      margin: 0.25rem 0;
+    }
+    .committee-member p {
+      font-size: 0.9rem;
+      margin: 0;
+    }
+    .team {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .team-member {
+      text-align: center;
+    }
+    .team-member img.headshot {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   <header class="site-header">
@@ -17,7 +58,7 @@
       <nav id="nav-menu" class="nav" aria-label="Primary">
         <a href="index.html" class="nav-link">Home</a>
         <a href="about.html" class="nav-link">About</a>
-        <a href="framework.html" class="nav-link">The Disciplinary Framework Process</a>
+        <a href="framework.html" class="nav-link">Disciplines</a>
         <div class="dropdown">
           <button class="dropdown-toggle" aria-expanded="false" aria-haspopup="true">Disciplines</button>
           <div class="dropdown-menu" role="menu">
@@ -31,29 +72,93 @@
   </header>
 
   <main class="container content">
-    <h1>About</h1><p>Investment in research is maximized when data are as open as possible: findable, interoperable, accessible, and reusable (FAIR). However, simply making data public in generalized repositories does not mean it is FAIR. Discipline-specific archiving will lower the barrier for scientists to make their data FAIR. The target disciplines of hydrology, oceans, and seismology were chosen because of their substantial but disparate existing resources and their demonstrated receptiveness to open data practices. The goal of this project is to build coalitions in three scientific disciplines by engaging stakeholders including researchers, publishers and data managers at multiple workshops and training events. They will develop community-vetted, disciplinary-specific data sharing frameworks; a web platform to implement the framework; and disciplinary leaders and liaisons to sustain the framework. The framework of community practices will also be captured to inform future use in other disciplines.<p></p>The proposed work will build a sustainable community resource for three target disciplines to drive their community toward a shared vision of common data resources including digital objects, methods and tools that are grounded in Open Science and findable, interoperable, accessible, and reusable (FAIR) data principles. The process of developing discipline-specific frameworks will coalesce existing community resources and help to identify areas for development of leading practices, vocabularies, and integration of standards. The vetting process includes open science practitioners providing a steady influence on the long-term value of data as an asset and the overall need for better data management, preservation methods and protocols. Each discipline?s leadership, through adoption and awareness efforts, help shape the path that will benefit broader science goals: 1) Community resources identified in partnership with respective members; 2) Interoperable data that are machine-actionable supporting discovery, trust, and reuse; 3) discipline-specific leadership that intentionally fosters skills development in data management, Open Science, and FAIR data. Framework dissemination and socialization via disciplinary communities and meetings will lower key barriers to the realization of the value of Open Science practices by putting community-vetted resources where researchers share their research and connect to their colleagues.</p>
-  
-  <section class="team">
-    <div class="team-member">
-      <img src="assets/images/leaders/leader1.jpg" alt="Leader 1" class="headshot">
-      <h2>Shelley Stall</h2>
-      <p>Shelley Stall bio</p>
-    </div>
+    <h1>About</h1>
+    <p>Investment in research is maximized when data are as open as possible: findable, interoperable, accessible, and reusable (FAIR). However, simply making data public in generalized repositories does not mean it is FAIR. Discipline-specific archiving will lower the barrier for scientists to make their data FAIR. The target disciplines of hydrology, oceans, and seismology were chosen because of their substantial but disparate existing resources and their demonstrated receptiveness to open data practices. The goal of this project is to build coalitions in three scientific disciplines by engaging stakeholders including researchers, publishers and data managers at multiple workshops and training events. They will develop community-vetted, disciplinary-specific data sharing frameworks; a web platform to implement the framework; and disciplinary leaders and liaisons to sustain the framework. The framework of community practices will also be captured to inform future use in other disciplines.</p>
+    <p>The proposed work will build a sustainable community resource for three target disciplines to drive their community toward a shared vision of common data resources including digital objects, methods and tools that are grounded in Open Science and findable, interoperable, accessible, and reusable (FAIR) data principles. The process of developing discipline-specific frameworks will coalesce existing community resources and help to identify areas for development of leading practices, vocabularies, and integration of standards. The vetting process includes open science practitioners providing a steady influence on the long-term value of data as an asset and the overall need for better data management, preservation methods and protocols. Each discipline’s leadership, through adoption and awareness efforts, help shape the path that will benefit broader science goals: 1) Community resources identified in partnership with respective members; 2) Interoperable data that are machine-actionable supporting discovery, trust, and reuse; 3) discipline-specific leadership that intentionally fosters skills development in data management, Open Science, and FAIR data. Framework dissemination and socialization via disciplinary communities and meetings will lower key barriers to the realization of the value of Open Science practices by putting community-vetted resources where researchers share their research and connect to their colleagues.</p>
 
-    <div class="team-member">
-      <img src="assets/images/leaders/leader2.jpg" alt="Leader 2" class="headshot">
-      <h2>Danie Kinkade</h2>
-      <p>Danie Kinkade bio</p>
-    </div>
+    <section class="motivation">
+      <h2>Project Motivation</h2>
+      <p>Our motivation is to reduce barriers for researchers in making their data FAIR while ensuring that disciplinary needs are met. By aligning with community practices and leveraging shared infrastructure, we aim to create a sustainable ecosystem that maximizes the value of scientific investments.</p>
+    </section>
 
-    <div class="team-member">
-      <img src="assets/images/leaders/leader3.jpg" alt="Leader 3" class="headshot">
-      <h2>Natalie Raia</h2>
-      <p>Natalie Raia bio</p>
-    </div>
-  </section>
-</main>
-  
+    <section class="goals">
+      <h2>Project Goals</h2>
+      <ul>
+        <li>Develop community-vetted, discipline-specific data sharing frameworks.</li>
+        <li>Create a web platform to implement and sustain the framework.</li>
+        <li>Foster disciplinary leadership and liaisons to drive adoption.</li>
+        <li>Inform broader use of frameworks across additional scientific domains.</li>
+      </ul>
+    </section>
+
+    <section class="collaborators">
+      <h2>Network Collaborator Committee</h2>
+      <p>The Network Collaborator Committee brings together representatives from diverse research domains, publishers, repositories, and data stewards. This committee advises on strategy, ensures alignment with disciplinary needs, and helps champion adoption across the community.</p>
+      <div class="committee-grid">
+        <div class="committee-member">
+          <img src="assets/images/committee/reyna-jenkyns.jpg" alt="Reyna Jenkyns">
+          <h3>Reyna Jenkyns</h3>
+          <p>Associate Director, International Technology Office World Data System/Ocean Networks Canada</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/jordan-read.jpg" alt="Jordan Read">
+          <h3>Jordan Read</h3>
+          <p>Executive Director, Consortium of Universities for the Advancement of Hydrologic Science (CUASHI)</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/kyle-onda.jpg" alt="Kyle Onda">
+          <h3>Kyle Onda</h3>
+          <p>Director Internet of Water, Center for Geospatial Solutions, Internet of Water</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/peter-pissierssons.jpg" alt="Peter Pissierssons">
+          <h3>Peter Pissierssons</h3>
+          <p>(retired), Former IOC Project Office, International Oceanographic Data and Information Exchange</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/justin-buck.jpg" alt="Justin Buck">
+          <h3>Justin Buck</h3>
+          <p>Senior Data Scientist, Marine Autonomous and Robotics Data Systems, British Oceanographic Data Center</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/lesley-wyborn.jpg" alt="Lesley Wyborn">
+          <h3>Lesley Wyborn</h3>
+          <p>Honorary Professor, Research School of Earth Sciences, Australian National University</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/helle-pedersen.jpg" alt="Helle Pedersen">
+          <h3>Helle Pedersen</h3>
+          <p>Professor Dr., ISTerre, Université Grenoble-Alpes</p>
+        </div>
+        <div class="committee-member">
+          <img src="assets/images/committee/adam-leadbetter.jpg" alt="Adam Leadbetter">
+          <h3>Adam Leadbetter</h3>
+          <p>Lead Manager, Decade Coordination Office for Ocean Data Sharing (DCO-ODS), IOC - UNESCO</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="team">
+      <h2>Project Team</h2>
+      <div class="team-member">
+        <img src="assets/images/leaders/leader1.jpg" alt="Leader 1" class="headshot">
+        <h3>Shelley Stall</h3>
+        <p>Shelley Stall bio</p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/leaders/leader2.jpg" alt="Leader 2" class="headshot">
+        <h3>Danie Kinkade</h3>
+        <p>Danie Kinkade bio</p>
+      </div>
+
+      <div class="team-member">
+        <img src="assets/images/leaders/leader3.jpg" alt="Leader 3" class="headshot">
+        <h3>Natalie Raia</h3>
+        <p>Natalie Raia bio</p>
+      </div>
+    </section>
+
   </main>
 
   <footer class="site-footer">
