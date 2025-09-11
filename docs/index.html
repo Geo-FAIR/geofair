@@ -43,6 +43,235 @@
 
   <img src="assets/images/Diagram_ForgingthePathtoFAIRData.jpg" alt="Framework illustration" class="homepage-image">
 
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Logo Carousel</title>
+  
+  <!-- Put logo images in /assets/logos/. PNG/SVG with transparent backgrounds work best.
+    Customize:
+    - Add/remove <img> inside .logo-track (duplicate set must match)
+    - Adjust --speed to control scroll duration
+    - Adjust --gap for spacing between logos -->
+  <style>
+    :root {
+      --gap: clamp(1rem, 2vw, 2rem);
+      --logo-height: clamp(28px, 6vw, 64px);
+      --speed: 30s; /* lower = faster */
+      --bg: #0b1020;
+      --card: #121830;
+      --ring: rgba(255,255,255,0.12);
+      --text-dim: rgba(255,255,255,0.7);
+    }
+
+    * { box-sizing: border-box; }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      color: white;
+      background: radial-gradient(1200px 600px at 10% -10%, #1b2350 0, transparent 60%),
+                  radial-gradient(900px 600px at 90% 10%, #1b5035 0, transparent 60%),
+                  var(--bg);
+    }
+
+    .section {
+      min-height: 100dvh;
+      display: grid;
+      place-items: center;
+      padding: 4rem 1rem;
+    }
+
+    .card {
+      width: min(1100px, 92vw);
+      background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.02));
+      border: 1px solid var(--ring);
+      border-radius: 24px;
+      padding: 2rem clamp(1rem, 3vw, 2rem);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25), inset 0 0 0 1px rgba(255,255,255,0.06);
+      backdrop-filter: blur(6px);
+    }
+
+    .heading {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .heading h2 {
+      margin: 0;
+      font-size: clamp(1.25rem, 2.5vw, 1.6rem);
+      letter-spacing: 0.3px;
+      font-weight: 650;
+    }
+
+    .hint { color: var(--text-dim); font-size: 0.95rem; }
+
+    .carousel-root {
+      position: relative;
+      overflow: hidden;
+      user-select: none;
+      -webkit-user-drag: none;
+      border-radius: 18px;
+      border: 1px solid var(--ring);
+      background: var(--card);
+      padding: 1rem 0; /* spacing above/below row */
+      isolation: isolate;
+    }
+
+    /* Fading edges for a premium feel */
+    .carousel-root::before,
+    .carousel-root::after {
+      content: "";
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 80px;
+      pointer-events: none;
+      z-index: 2;
+    }
+    .carousel-root::before { left: 0; background: linear-gradient(90deg, var(--card), transparent); }
+    .carousel-root::after  { right: 0; background: linear-gradient(-90deg, var(--card), transparent); }
+
+    .logo-row {
+      display: grid;
+      gap: 0.5rem; /* vertical gap between rows (if using two rows) */
+    }
+
+    .logo-track {
+      display: flex;
+      align-items: center;
+      gap: var(--gap);
+      height: calc(var(--logo-height) + 1.25rem);
+      padding: 0.6rem calc(var(--gap) * 1.25);
+      /* Duplicate content animates left to right */
+      animation: scroll var(--speed) linear infinite;
+    }
+
+    /* Pause on hover or focus within (keyboard users) */
+    .carousel-root:hover .logo-track,
+    .carousel-root:focus-within .logo-track { animation-play-state: paused; }
+
+    /* Respect reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      .logo-track { animation: none; }
+    }
+
+    @keyframes scroll {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .logo-item {
+      flex: 0 0 auto;
+      height: var(--logo-height);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      filter: drop-shadow(0 2px 8px rgba(0,0,0,0.25));
+    }
+    .logo-item img {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+      display: block;
+      opacity: 0.9;
+      transition: transform 180ms ease, opacity 180ms ease;
+    }
+    .logo-item img:hover,
+    .logo-item img:focus { opacity: 1; transform: translateY(-2px) scale(1.03); }
+
+    /* Simple focus style when logos are links */
+    .logo-item a { outline: none; border-radius: 10px; }
+    .logo-item a:focus-visible { box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.6); }
+
+    /* Optional: top/bottom subtle separators */
+    .divider {
+      height: 1px; width: 100%;
+      background: linear-gradient(90deg, transparent, var(--ring), transparent);
+      margin: 0.25rem 0;
+    }
+
+    footer { text-align: center; color: var(--text-dim); margin-top: 1rem; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main class="section">
+    <div class="card" role="region" aria-label="Partner & sponsor logos carousel">
+      <div class="heading">
+        <h2>Partners & Sponsors</h2>
+        <div class="hint">Hover to pause · Tab to focus individual logos</div>
+      </div>
+
+      <div class="carousel-root" aria-live="polite">
+        <div class="divider" aria-hidden="true"></div>
+
+        <!--
+          IMPORTANT: For seamless infinite scrolling, the items in .set-A and .set-B must be identical
+          and in the same order. Replace the example logos with your real files.
+        -->
+        <div class="logo-row">
+          <div class="logo-track" id="track-1">
+            <div class="set set-A">
+              <span class="logo-item"><a href="#" aria-label="Logo 1"><img src="assets/logos/logo1.svg" alt="Logo 1"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 2"><img src="assets/logos/logo2.svg" alt="Logo 2"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 3"><img src="assets/logos/logo3.svg" alt="Logo 3"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 4"><img src="assets/logos/logo4.svg" alt="Logo 4"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 5"><img src="assets/logos/logo5.svg" alt="Logo 5"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 6"><img src="assets/logos/logo6.svg" alt="Logo 6"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 7"><img src="assets/logos/logo7.svg" alt="Logo 7"></a></span>
+              <span class="logo-item"><a href="#" aria-label="Logo 8"><img src="assets/logos/logo8.svg" alt="Logo 8"></a></span>
+            </div>
+            <div class="set set-B" aria-hidden="true">
+              <!-- Duplicate of set-A for seamless loop -->
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo1.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo2.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo3.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo4.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo5.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo6.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo7.svg" alt=""></a></span>
+              <span class="logo-item"><a href="#"><img src="assets/logos/logo8.svg" alt=""></a></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="divider" aria-hidden="true"></div>
+      </div>
+
+      <footer>
+        Tip: Use optimized SVG/PNG at ~2–3× the rendered height for best clarity.
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Optional: dynamically set duplicates if you prefer to write items once.
+    // (Disabled by default—uncomment to auto-duplicate.)
+    // const track = document.getElementById('track-1');
+    // if (track) {
+    //   const setA = track.querySelector('.set-A');
+    //   const setB = track.querySelector('.set-B');
+    //   if (setA && setB && setB.children.length === 0) {
+    //     setB.innerHTML = setA.innerHTML.replaceAll(/alt="[^"]*"/g, 'alt=""');
+    //   }
+    // }
+
+    // Respect reduced motion via JS as well (toggle animation by adding inline style)
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    function applyReducedMotionPreference(e) {
+      const tracks = document.querySelectorAll('.logo-track');
+      tracks.forEach(t => {
+        t.style.animationPlayState = e.matches ? 'paused' : 'running';
+      });
+    }
+    mediaQuery.addEventListener('change', applyReducedMotionPreference);
+    applyReducedMotionPreference(mediaQuery);
+  </script>
+</body>
+</html>
+
   </main>
 
   <footer class="site-footer">
