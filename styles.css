@@ -114,3 +114,14 @@ footer p {
     transform: translateX(-50%);
   }
 }
+
+/* ------------------------------
+    Responsive homepage illustration 
+------------------------------ */
+.homepage-image {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+  border-radius: 12px;
+}
