@@ -21,73 +21,104 @@ a:hover{ text-decoration: underline }
 
 .container{ width: min(1100px, 92%); margin: 0 auto; }
 
+/* ============================
+   Header & Navigation
+   Logo left, nav right, CTA button
+============================ */
 .site-header{
-  position: sticky; top:0; z-index:1000;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   backdrop-filter: saturate(140%) blur(8px);
-  background: rgba(10,15,30,.65);
+  background: rgba(10,15,30,.9);
   border-bottom: 1px solid rgba(122,162,255,.12);
 }
+
 .site-header .container{
-  display:flex; align-items:center; gap: 1rem;
-  padding: .8rem 0;
+  width: min(1100px, 92%);
+  margin: 0 auto;
+  padding: .8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
 }
+
+/* Logo + wordmark */
 .brand{
-  font-weight: 800; letter-spacing:.2px; color: var(--text);
-  padding:.4rem .6rem; border-radius:.6rem;
-}
-.brand:hover{ background: rgba(122,162,255,.08); text-decoration:none }
-
-.nav{ display:flex; align-items:center; gap:.4rem; margin-left:auto }
-.nav a.nav-link, .dropdown-toggle{
-  display:inline-flex; align-items:center; gap:.35rem;
-  padding:.55rem .75rem; border-radius:.6rem; border:1px solid transparent;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-weight: 700;
+  letter-spacing: .2px;
   color: var(--text);
+  padding: .25rem .4rem;
+  border-radius: .6rem;
+  text-decoration: none;
 }
-.nav a.nav-link:hover, .dropdown-toggle:hover{
-  background: rgba(122,162,255,.08);
-  text-decoration:none;
-}
-.nav a.nav-link.active, .dropdown-toggle.active{
-  border-color: var(--ring);
+
+.brand:hover{
   background: rgba(122,162,255,.12);
-  box-shadow: 0 0 0 .25rem var(--ring);
+  text-decoration: none;
 }
 
-.dropdown{ position:relative }
-.dropdown .dropdown-toggle{
-  background: rgba(122,162,255,.05);
+.brand-logo{
+  height: 32px;
+  width: auto;
+  display: block;
 }
-.dropdown .dropdown-menu{
-  position: absolute; top: 100%; left: 0;
-  display:none; min-width: 14rem;
-  background: var(--card);
-  border:1px solid rgba(122,162,255,.15);
-  border-radius: .8rem;
-  padding: .4rem; margin-top:.3rem;
-  box-shadow: 0 12px 40px rgba(0,0,0,.35);
-}
-.dropdown.open .dropdown-menu{ display:block }
-.dropdown:hover .dropdown-menu{ display:block }
-.dropdown-menu a{
-  display:block; padding:.55rem .7rem; border-radius:.6rem; color: var(--text);
-}
-.dropdown-menu a:hover{ background: rgba(122,162,255,.08); text-decoration:none }
-.dropdown-menu a.active{ background: rgba(105,224,201,.12); border:1px solid rgba(105,224,201,.35) }
 
-.nav-toggle{
-  display:none;
-  margin-left:auto;
-  background: transparent; border:1px solid rgba(122,162,255,.25);
-  color: var(--text); padding:.5rem .7rem; border-radius:.6rem;
+/* Right-aligned navigation */
+.nav{
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
 }
-.nav.open{ display:flex }
 
+.nav-link{
+  display: inline-flex;
+  align-items: center;
+  font-size: .95rem;
+  color: var(--text);
+  padding: .3rem 0;
+  text-decoration: none;
+}
+
+.nav-link:hover{
+  color: var(--brand);
+  text-decoration: none;
+}
+
+/* Get Involved = primary CTA */
+.nav-cta{
+  padding: .4rem 1rem;
+  border-radius: 999px;
+  border: 1px solid var(--brand);
+  background: var(--brand);
+  color: #050816;
+  font-weight: 600;
+}
+
+.nav-cta:hover{
+  background: #8bb0ff;
+  border-color: #8bb0ff;
+  color: #050816;
+}
+
+/* Basic small-screen handling: stack a bit but keep nav usable */
 @media (max-width: 860px){
-  .nav{ display:none; position:absolute; right:4%; top:64px; flex-direction:column; align-items:stretch; background: var(--card); padding:.6rem; border-radius:.8rem; border:1px solid rgba(122,162,255,.15) }
-  .nav a.nav-link, .dropdown-toggle{ width:100% }
-  .dropdown .dropdown-menu{ position:static; display:none; box-shadow:none; border:none; background: transparent; padding:0; margin:0 }
-  .dropdown.open .dropdown-menu{ display:block }
-  .nav-toggle{ display:inline-flex }
+  .site-header .container{
+    flex-wrap: wrap;
+    gap: .75rem;
+  }
+
+  .nav{
+    width: 100%;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
 }
 
 .content{ padding: 2rem 0 4rem }
