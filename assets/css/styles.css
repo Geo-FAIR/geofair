@@ -140,3 +140,37 @@ h2{ font-size: clamp(1.35rem, 1.8vw, 1.6rem); margin:1.4rem 0 .6rem 0 }
   box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
+/* ============================
+   Logo Carousel
+============================ */
+.carousel {
+  overflow: hidden;
+  margin: 2.5rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  animation: logo-scroll 30s linear infinite;
+}
+
+.carousel img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+  opacity: 0.9;
+  transition: opacity .2s ease, transform .2s ease;
+}
+
+.carousel img:hover {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* smooth infinite scroll */
+@keyframes logo-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
