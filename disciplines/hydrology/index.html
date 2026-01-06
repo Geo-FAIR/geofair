@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hydrology – GeoFAIR</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../index.html">GeoFAIR</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../ocean/index.html" class="nav-link">Ocean Sciences</a>
+        <a href="../hydrology/index.html" class="nav-link">Hydrology</a>
+        <a href="../seismology/index.html" class="nav-link">Seismology</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="hero">
+      <h1>Hydrology</h1>
+      <p class="lead">
+        Hydrologic science spans observations, models, and socio-environmental
+        systems, with data distributed across many organizations and platforms.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Hydrologic data include streamflow, groundwater, water quality, climate
+        variables, and human water use. While substantial infrastructure exists,
+        practices and standards can be fragmented, making it difficult for
+        researchers to discover, access, and integrate data across projects and
+        regions.
+      </p>
+      <p>
+        GeoFAIR aims to help hydrologists identify trusted repositories, adopt
+        consistent metadata and methods documentation, and connect to existing
+        community initiatives that support FAIR hydrologic data.
+      </p>
+    </section>
+
+    <section>
+      <h2>Network Collaborator Committee Representatives</h2>
+      <ul>
+        <li>Jordan Reed</li>
+        <li>Kyle Onda</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Collaborating Organizations</h2>
+      <ul>
+        <li>CUAHSI</li>
+        <li>Internet of Water</li>
+        <li>ESIP</li>
+        <li>World Data System</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        The GeoFAIR project is funded by the U.S. National Science Foundation
+        (Award #2524899).
+      </p>
+      <p>Project dates: September 1, 2025 – August 31, 2027.</p>
+      <p>
+        © <span id="year"></span> GeoFAIR Project ·
+        <a href="https://github.com/Geo-FAIR/geofair">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

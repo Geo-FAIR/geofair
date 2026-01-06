@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ocean Sciences – GeoFAIR</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../index.html">GeoFAIR</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../ocean/index.html" class="nav-link">Ocean Sciences</a>
+        <a href="../hydrology/index.html" class="nav-link">Hydrology</a>
+        <a href="../seismology/index.html" class="nav-link">Seismology</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container content">
+    <section class="hero">
+      <h1>Ocean Sciences</h1>
+      <p class="lead">
+        The ocean science community has a long history of data sharing, driven by the
+        inherently interdisciplinary nature of oceanographic research and the high cost
+        of seagoing work.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Oceanographic research spans biological, chemical, physical, and geological
+        oceanography. Sharing data across these subdisciplines is essential for
+        answering complex process and system questions. At the same time, new sensors
+        and evolving data types create ongoing challenges for interoperability and
+        integration.
+      </p>
+      <p>
+        International efforts such as SeaDataNet, EMODNet, IMOS, and Ocean Best
+        Practices, along with the UN Decade of Ocean Science for Sustainable
+        Development, have elevated the importance of FAIR and Open data to address
+        global ocean challenges.
+      </p>
+    </section>
+
+    <section>
+      <h2>Network Collaborator Committee Representatives</h2>
+      <ul>
+        <li>Peter Pissierssens</li>
+        <li>Justin Buck</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Collaborating Organizations</h2>
+      <ul>
+        <li>IODE</li>
+        <li>Ocean InfoHub (OIH)</li>
+        <li>Ocean Best Practices (OBP)</li>
+        <li>BODC</li>
+        <li>Ocean Networks Canada</li>
+        <li>British Antarctic Survey</li>
+        <li>ESIP</li>
+        <li>World Data System</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        The GeoFAIR project is funded by the U.S. National Science Foundation
+        (Award #2524899): “GEO OSE Track 1: Forging Cross-Stakeholder Partnerships
+        to Accelerate Geoscience Discoveries: Cultivating Sustainable Disciplinary
+        Open Science Communities”.
+      </p>
+      <p>Project dates: September 1, 2025 – August 31, 2027.</p>
+      <p>
+        © <span id="year"></span> GeoFAIR Project ·
+        <a href="https://github.com/Geo-FAIR/geofair">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

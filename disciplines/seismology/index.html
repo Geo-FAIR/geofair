@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Seismology – GeoFAIR</title>
+  <link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../../index.html">GeoFAIR</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../../index.html" class="nav-link">Home</a>
+        <a href="../ocean/index.html" class="nav-link">Ocean Sciences</a>
+        <a href="../hydrology/index.html" class="nav-link">Hydrology</a>
+        <a href="../seismology/index.html" class="nav-link">Seismology</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container content">
+    <section class="hero">
+      <h1>Seismology</h1>
+      <p class="lead">
+        The seismological community has been at the forefront of data
+        standardization and sharing for decades, enabling global networks of
+        seismic observations.
+      </p>
+    </section>
+
+    <section>
+      <p>
+        Through the International Federation of Digital Seismograph Networks (FDSN),
+        seismology has developed widely adopted data and metadata standards. Many of
+        these precede the FAIR principles and are now being revisited to better
+        support machine-actionable data, interoperable vocabularies, and modern AI/ML
+        workflows.
+      </p>
+      <p>
+        GeoFAIR aims to amplify these efforts by connecting researchers to existing
+        standards, repositories, and guidance, and by supporting the evolution of
+        FAIR-aligned seismological vocabularies.
+      </p>
+    </section>
+
+    <section>
+      <h2>Network Collaborator Committee Representatives</h2>
+      <ul>
+        <li>Lesley Wyborn</li>
+        <li>Helle Pedersen</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Collaborating Organizations</h2>
+      <ul>
+        <li>ISTerre</li>
+        <li>EarthScope</li>
+        <li>IRIS</li>
+        <li>Swiss Seismological Service</li>
+        <li>ESIP</li>
+        <li>World Data System</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        The GeoFAIR project is funded by the U.S. National Science Foundation
+        (Award #2524899).
+      </p>
+      <p>Project dates: September 1, 2025 – August 31, 2027.</p>
+      <p>
+        © <span id="year"></span> GeoFAIR Project ·
+        <a href="https://github.com/Geo-FAIR/geofair">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
