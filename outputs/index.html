@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Outputs - GeoFAIR</title>
+  <link rel="stylesheet" href="../styles.css">
+  <style>
+    /* Output item styling */
+    .output-item {
+      background-color: #f9f9f9;
+      border-left: 4px solid #0066cc;
+      padding: 20px;
+      margin-bottom: 20px;
+      border-radius: 4px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    
+    .output-item:hover {
+      transform: translateX(5px);
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .output-item h3 {
+      margin-top: 0;
+      color: #0066cc;
+      font-size: 1.2em;
+    }
+    
+    .output-item .meta {
+      color: #666;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+    
+    .output-item .description {
+      line-height: 1.6;
+    }
+    
+    .output-item .links {
+      margin-top: 15px;
+    }
+    
+    .output-item .links a {
+      display: inline-block;
+      margin-right: 15px;
+      color: #0066cc;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    
+    .output-item .links a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Filter/category tabs */
+    .category-filters {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    
+    .category-filters button {
+      padding: 10px 20px;
+      background-color: #f0f0f0;
+      border: 2px solid #ddd;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1em;
+      transition: all 0.3s ease;
+    }
+    
+    .category-filters button:hover,
+    .category-filters button.active {
+      background-color: #0066cc;
+      color: white;
+      border-color: #0066cc;
+    }
+    
+    /* Section styling */
+    .outputs-section {
+      margin-bottom: 50px;
+    }
+    
+    .outputs-section h2 {
+      color: #333;
+      border-bottom: 3px solid #0066cc;
+      padding-bottom: 10px;
+      margin-bottom: 25px;
+    }
+    
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      background-color: #f9f9f9;
+      border-radius: 8px;
+      color: #666;
+    }
+    
+    .empty-state p {
+      font-style: italic;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="../index.html">
+        <img src="../assets/logos/geofair.png"
+        alt="GeoFAIR project logo"
+        class="brand-logo">
+        <span>GeoFAIR</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="../about/index.html" class="nav-link">About</a>
+        <a href="../outputs/index.html" class="nav-link">Outputs</a>
+        <a href="../get-involved/index.html" class="nav-link nav-cta">Get Involved</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="container content">
+    <section class="hero">
+      <h1>Project Outputs</h1>
+      <p class="lead">
+        Explore publications, presentations, workshops, and resources produced by the GeoFAIR project.
+      </p>
+    </section>
+
+    <!-- Proposal -->
+    <section class="outputs-section">
+      <h2>Proposal</h2>
+      
+      <div class="output-item">
+        <h3>GeoFAIR Project Proposal</h3>
+        <div class="meta">January 2025 | Project Documentation</div>
+        <div class="description">
+          The full project proposal outlining the vision, goals, and implementation strategy for building community-governed, discipline-specific frameworks to support FAIR data practices across Earth and environmental sciences.
+        </div>
+        <div class="links">
+          <a href="https://doi.org/10.5281/zenodo.14887842" target="_blank">View on Zenodo →</a>
+        </div>
+      </div>
+
+      <!-- Add more publications as they become available -->
+      <!-- Example template:
+      <div class="output-item">
+        <h3>Title of Publication</h3>
+        <div class="meta">Date | Type</div>
+        <div class="description">
+          Brief description of the publication...
+        </div>
+        <div class="links">
+          <a href="#">Read Paper →</a>
+          <a href="#">Download PDF →</a>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <!-- Workshop Reports -->
+    <section class="outputs-section">
+      <h2>Workshops Reports</h2>
+      
+      <div class="empty-state">
+        <p>Workshop materials will be added as they become available.</p>
+        <p>Check back soon for recordings, slides, and training resources!</p>
+      </div>
+
+      <!-- Template for future workshops:
+      <div class="output-item">
+        <h3>Workshop Title</h3>
+        <div class="meta">Date | Location/Virtual</div>
+        <div class="description">
+          Description of workshop content and learning objectives...
+        </div>
+        <div class="links">
+          <a href="#">View Recording →</a>
+          <a href="#">Download Slides →</a>
+          <a href="#">Access Materials →</a>
+        </div>
+      </div>
+      -->
+    </section>
+
+    <!-- Conference Presentations Section -->
+    <section class="outputs-section">
+      <h2>Conference Presentations</h2>
+      
+      <div class="empty-state">
+        <p>Conference presentations and abstracts will be posted here.</p>
+        <p>Stay tuned for updates from upcoming conferences!</p>
+      </div>
+
+      <!-- Template for future presentations:
+      <div class="output-item">
+        <h3>Presentation Title</h3>
+        <div class="meta">Conference Name | Date | Location</div>
+        <div class="description">
+          Abstract or description of the presentation...
+        </div>
+        <div class="links">
+          <a href="#">View Abstract →</a>
+          <a href="#">Download Poster →</a>
+          <a href="#">View Slides →</a>
+        </div>
+      </div>
+      -->
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>
+        The GeoFAIR project is funded by the U.S. National Science Foundation
+        (Award #2524899): "GEO OSE Track 1: Forging Cross-Stakeholder Partnerships
+        to Accelerate Geoscience Discoveries: Cultivating Sustainable Disciplinary
+        Open Science Communities".
+      </p>
+      <p>Project dates: September 1, 2025 – August 31, 2027.</p>
+      <p>
+        © <span id="year"></span> GeoFAIR Project ·
+        <a href="https://github.com/Geo-FAIR/geofair">GitHub</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
